@@ -8,7 +8,6 @@ const List = ({API_KEY}) => {
 
     useEffect(() => {
         const callAPI = async () => {
-            console.log({API_KEY})
             if (search && cuisine) {
                 const query = `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine}&number=10&apiKey=${API_KEY}`;
                 try {

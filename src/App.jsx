@@ -10,8 +10,7 @@ function App() {
   return (
     <div className="app-container">
       <h1>Recipe List</h1>
-      console.log({API_KEY});
-      {/* {API_KEY ? <List API_KEY={API_KEY} /> : <p>API key is not defined.</p>} */}
+      {API_KEY ? <List API_KEY={API_KEY} /> : <p>API key is not defined.</p>}
     </div>
   )
 }
