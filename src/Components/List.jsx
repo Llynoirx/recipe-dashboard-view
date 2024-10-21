@@ -8,6 +8,7 @@ const List = ({API_KEY}) => {
 
     useEffect(() => {
         const callAPI = async () => {
+            console.log({API_KEY})
             if (search && cuisine) {
                 const query = `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine}&number=10&apiKey=${API_KEY}`;
                 try {
@@ -34,7 +35,7 @@ const List = ({API_KEY}) => {
         <div className="list-container">
             <input 
                 type="text" 
-                placeholder="Cuisine (e.g., italian)" 
+                placeholder="Cuisine (ie. Italian)" 
                 value={cuisine} 
                 onChange={(e) => setCuisine(e.target.value)} 
             />
