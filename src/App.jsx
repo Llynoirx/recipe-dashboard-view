@@ -24,14 +24,19 @@ function App() {
                 try {
                     const response = await fetch(query);
                     const json = await response.json();
-                    if (!json.results) alert("Oops! Something went wrong with that query, let's try again!");
-                    else setData(json.results);
+                    if (!json.results) {
+                      alert("Oops! Something went wrong with that query, let's try again!");
+                    } else if(json.results.length === 0) {
+                      setData([]);
+                    } else {
+                      setData(json.results);
+                    } 
                 } catch (error) {
                     alert("An error occurred while fetching data.");
                     console.error(error);
                 } finally {
                     setLoading(false);
-                    setSearch(false);
+                    // setSearch(false);
                 }
             }
         };
