@@ -47,7 +47,13 @@ function App() {
                   } else if (json.results.length === 0) {
                       setData([]);
                   } else {
-                      setData(json.results);
+                      const recipeDetails = await Promise.all(
+                        json.results.map(async (item) => {
+                            const detailResponse = await fetch(`https://api.spoonacular.com/recipes/${item.id}/information?apiKey=${API_KEY}`);
+                            return await detailResponse.json();
+                        })
+                      );
+                      setData(recipeDetails);
                   }
               } catch (error) {
                   alert("An error occurred while fetching data.");

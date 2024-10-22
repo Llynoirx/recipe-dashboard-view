@@ -10,12 +10,9 @@ const RecipeList = ({ data, hasSearched }) => {
                     <div key={item.id} className="list-item">
                         <h3>{item.title}</h3>
                         <img src={item.image} alt={item.title} />
-                        <p>Max Ready Time: {item.maxReadyTime} </p>
-                        <p>Number of Servings: {item.minServings}-{item.maxServings} </p>
-                        <p>Number of Calories: {item.minCalories}-{item.maxCalories} </p>
-                        <p>Protein: {item.minProtein}-{item.maxProtein} </p>
-                        <p>Fat: {item.minFat}-{item.maxFat} </p>
-                        <p>Carbs: {item.minCarbs}-{item.maxCarbs} </p>
+                        <p>Ready Time: {item.readyInMinutes}mins </p>
+                        <p>Number of Servings: {item.servings} </p>
+                        <p>Health Score: {item.healthScore} </p>
                     </div>
                 ))
             ) : (hasSearched && data.length === 0 && <div>No results found</div>)}
