@@ -74,8 +74,8 @@ function App() {
             {API_KEY ? 
             <>
               {loading ? <div>Loading...</div> : null} 
+              <Stats data={data} hasSearched={search && !loading}  /> 
               <RecipeList data={data} hasSearched={search && !loading} /> 
-              {/* <Stats data={data} />  */}
             </>
             : <p>API key is not defined</p>}
         </div>

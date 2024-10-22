@@ -1,25 +1,31 @@
 import React from 'react';
+// import './Stats.css';
 
-const Stats = ({ data }) => {
-    
-    // const meanReadyTime = 
-    // const meanServings 
-    // const meanCalories
-    // const meanProtein
-    // const meanFat
-    // const meanCarbs
-   
+const Stats = ({ data, hasSearched }) => {
+    const calcMean = (list) => {
+        if (list.length === 0) return 0;
+        const sum = list.reduce((acc, curr) => acc + curr, 0);
+        return sum / list.length;
+    };
+
+    const readyTimesList = data.map(item => item.readyInMinutes);
+    const servingsList = data.map(item => item.servings);
+    const healthScoresList = data.map(item => item.healthScore);
+
+    const meanReadyTime = calcMean(readyTimesList);
+    const meanServings = calcMean(servingsList);
+    const meanHealthScore = calcMean(healthScoresList);
+
     return (
-        <div className="stats">
-            <h2>Summary Statistics Across The Recipes</h2>
-            <ul>
-                <li>Average Max Ready Time: {meanReadyTime}</li>
-                <li>Average Number of Servings: {meanServings}</li>
-                <li>Average Number of Calories: {meanCalories}</li>
-                <li>Average Protein: {meanProtein}</li>
-                <li>Average Fat: {meanFat}</li>
-                <li>Average Carbs: {meanCarbs}</li>
-            </ul>
+        <div className="stats-container">
+
+                {data.length > 0 ? (
+                <>
+                    <p>Mean Ready Time: {meanReadyTime} mins</p>
+                    <p>Mean Servings: {meanServings}</p>
+                    <p>Mean Health Score: {meanHealthScore} / 100</p>
+                 </>
+                ) : (hasSearched && <p>No statistics available, no recipes found.</p>)}
         </div>
     );
 };

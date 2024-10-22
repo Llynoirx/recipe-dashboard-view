@@ -12,7 +12,7 @@ const RecipeList = ({ data, hasSearched }) => {
                         <img src={item.image} alt={item.title} />
                         <p>Ready Time: {item.readyInMinutes}mins </p>
                         <p>Number of Servings: {item.servings} </p>
-                        <p>Health Score: {item.healthScore} </p>
+                        <p>Health Score: {item.healthScore}/100 </p>
                     </div>
                 ))
             ) : (hasSearched && data.length === 0 && <div>No results found</div>)}
