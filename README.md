@@ -1,10 +1,10 @@
-# Web Development Project 5 - *Name of App Here*
+# Web Development Project 5 - *Recipe Dashboard*
 
 Submitted by: **Kathy Ho**
 
-This web app: **insert description**
+This web app: **Leverage the Spoonacular Recipe API to create a dynamic recipe list that analyzes and filters categories such as cuisine, diet, and intolerances through search. The application will then present a comprehensive summary of the recipes, including statistics like mean ready time, mean servings, and average health score rating**
 
-Time spent: **6** hours spent in total
+Time spent: **6.5** hours spent in total
 
 ## Required Features
 
@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-![](https://github.com/Llynoirx/data-dashboard/blob/main/data-dashboard.gif)
+![](https://github.com/Llynoirx/data-dashboard/blob/main/recipe-dashboard.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with AwesomeScreenshot and EzGif  
