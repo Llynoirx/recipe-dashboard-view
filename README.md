@@ -12,8 +12,8 @@ The following **required** functionality is completed:
 
 - [x] **The list displays a list of data fetched using an API call**
 - [x] **Data uses the useEffect React hook and async/await syntax**
-- [ ] **The app dashboard includes at least three summary statistics about the data such as**
-  - [ ] *insert details*
+- [x] **The app dashboard includes at least three summary statistics about the data such as**
+  - [x] meanReadyTime, meanServings, meanHealthScore
 - [x] **A search bar allows the user to search for an item in the fetched data**
 - [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
 
@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-![](https://github.com/Llynoirx/veni__vici/blob/main/data-dashboard.gif)
+![](https://github.com/Llynoirx/data-dashboard/blob/main/data-dashboard.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with AwesomeScreenshot and EzGif  
@@ -41,7 +41,7 @@ GIF created with AwesomeScreenshot and EzGif
 ## Notes
 
 Describe any challenges encountered while building the app.
-Was unsure how to put banned attributes onto a column on the side like the demo
+Had trouble making loading text go away before search and/or writing message with invalid query
 
 ## License
 

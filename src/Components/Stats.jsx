@@ -1,5 +1,4 @@
 import React from 'react';
-// import './Stats.css';
 
 const Stats = ({ data, hasSearched }) => {
     const calcMean = (list) => {
@@ -17,15 +16,14 @@ const Stats = ({ data, hasSearched }) => {
     const meanHealthScore = calcMean(healthScoresList);
 
     return (
-        <div className="stats-container">
-
-                {data.length > 0 ? (
-                <>
-                    <p>Mean Ready Time: {meanReadyTime} mins</p>
-                    <p>Mean Servings: {meanServings}</p>
-                    <p>Mean Health Score: {meanHealthScore} / 100</p>
-                 </>
-                ) : (hasSearched && <p>No statistics available, no recipes found.</p>)}
+        <div>
+            {data.length > 0 ? (
+            <>
+                <p>Mean Ready Time: {meanReadyTime} mins</p>
+                <p>Mean Servings: {meanServings}</p>
+                <p>Mean Health Score: {meanHealthScore}/100</p>
+                </>
+            ) : (hasSearched && <p>No statistics available, no recipes found.</p>)}
         </div>
     );
 };
