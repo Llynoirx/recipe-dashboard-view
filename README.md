@@ -42,6 +42,7 @@ GIF created with AwesomeScreenshot and EzGif
 ## Notes
 
 Describe any challenges encountered while building the app.
+
 Had trouble making loading text go away before search and/or writing message with invalid query
 
 ## License
