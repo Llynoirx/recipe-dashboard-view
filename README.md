@@ -33,6 +33,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
+
 ![](https://github.com/Llynoirx/recipe-dashboard/blob/main/recipe-dashboard.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
