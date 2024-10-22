@@ -19,7 +19,7 @@ const Stats = ({ data, hasSearched }) => {
         <div>
             {data.length > 0 ? (
             <>
-                <p>Mean Ready Time: {meanReadyTime} mins</p>
+                <p>Mean Ready Time: {meanReadyTime}mins</p>
                 <p>Mean Servings: {meanServings}</p>
                 <p>Mean Health Score: {meanHealthScore}/100</p>
                 </>
