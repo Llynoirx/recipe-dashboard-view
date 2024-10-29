@@ -1,40 +1,36 @@
-# Web Development Project 5 - *Recipe Dashboard*
+# Web Development Project 6 - *Recipe Dashboard View*
 
 Submitted by: **Kathy Ho**
 
-This web app: **Leverage the Spoonacular Recipe API to create a dynamic recipe list that analyzes and filters categories such as cuisine, diet, and intolerances through search. The application will then present a comprehensive summary of the recipes, including statistics like mean ready time, mean servings, and average health score rating**
+This web app: **insert description**
 
-Time spent: **6.5** hours spent in total
+Time spent: **X** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The list displays a list of data fetched using an API call**
-- [x] **Data uses the useEffect React hook and async/await syntax**
-- [x] **The app dashboard includes at least three summary statistics about the data such as**
-  - [x] meanReadyTime, meanServings, meanHealthScore
-- [x] **A search bar allows the user to search for an item in the fetched data**
-- [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [x] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [ ] **Clicking on an item in the list view displays more details about it**
+  - [ ] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
+- [ ] **Clicking on an item has a direct, unique link to that item's detail view page**
+  - [ ] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.  
+
 
 The following **optional** features are implemented:
 
-- [x] Multiple filters can be applied simultaneously
-- [ ] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [ ] The site's customized dashboard contains more content that explains what is interesting about the data
+- [ ] The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
-* [x] List anything else that you added to improve the site's functionality!
- - Added loading screen 
- - Display 'No results found' for queries not available in the database
- - Can apply just a couple of the filters (ie. 1-2) instead of all of the filters
+* [ ] List anything else that you added to improve the site's functionality!
+
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-
-![](https://github.com/Llynoirx/recipe-dashboard/blob/main/recipe-dashboard.gif)
+![](https://github.com/Llynoirx/data-dashboard/blob/main/recipe-dashboard.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with AwesomeScreenshot and EzGif  
@@ -42,8 +38,6 @@ GIF created with AwesomeScreenshot and EzGif
 ## Notes
 
 Describe any challenges encountered while building the app.
-
-Had trouble making loading text go away before search and/or writing message with invalid query
 
 ## License
 
