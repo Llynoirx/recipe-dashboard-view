@@ -1,4 +1,5 @@
 import React from 'react';
+import RecipeChart from './RecipeChart';
 
 const Stats = ({ data, hasSearched }) => {
     const calcMean = (list) => {
