@@ -3,6 +3,7 @@ import './App.css';
 import RecipeList from './Components/RecipeList'; 
 import SearchBar from './Components/SearchBar';
 import Stats from './Components/Stats';
+import RecipeChart from './Components/RecipeChart';
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
@@ -74,7 +75,7 @@ function App() {
             {API_KEY ? 
             <>
               {loading ? <div>Loading...</div> : null} 
-              <Stats data={data} hasSearched={search && !loading}  /> 
+              <Stats data={data} hasSearched={search && !loading}  />
               <RecipeList data={data} hasSearched={search && !loading} /> 
             </>
             : <p>API key is not defined</p>}

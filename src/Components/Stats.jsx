@@ -22,7 +22,8 @@ const Stats = ({ data, hasSearched }) => {
                 <p>Mean Ready Time: {meanReadyTime}mins</p>
                 <p>Mean Servings: {meanServings}</p>
                 <p>Mean Health Score: {meanHealthScore}/100</p>
-                </>
+                <RecipeChart meanHealthScore={meanHealthScore} />
+            </>
             ) : (hasSearched && <p>No statistics available, no recipes found.</p>)}
         </div>
     );
