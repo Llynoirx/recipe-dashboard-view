@@ -3,7 +3,6 @@ import './App.css';
 import RecipeList from './Components/RecipeList'; 
 import SearchBar from './Components/SearchBar';
 import Stats from './Components/Stats';
-import RecipeChart from './Components/RecipeChart';
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
@@ -67,20 +66,24 @@ function App() {
       callAPI();
   }, [search, cuisine, diet, intolerances, API_KEY]);
   
-
-    return (
-        <div className="app-container">
-            <h1>Recipe List</h1>
-            <SearchBar handleSearch={handleSearch} />
-            {API_KEY ? 
-            <>
-              {loading ? <div>Loading...</div> : null} 
-              <Stats data={data} hasSearched={search && !loading}  />
-              <RecipeList data={data} hasSearched={search && !loading} /> 
-            </>
-            : <p>API key is not defined</p>}
-        </div>
-    );
+    // return (
+    //     <BrowserRouter>
+    //         <div className="app-container">
+    //             <h1>Recipe List</h1>
+    //             <SearchBar handleSearch={handleSearch} />
+    //             {API_KEY ? 
+    //                 <>
+    //                     {loading ? <div>Loading...</div> : null} 
+    //                     <Stats data={data} hasSearched={search && !loading}  />
+    //                     <Routes>
+    //                         <Route path="/" element={<RecipeList data={data} hasSearched={search && !loading} />} />
+    //                         <Route path="/recipe/:id" element={<RecipeDetail />} /> 
+    //                     </Routes>
+    //                 </>
+    //             : <p>API key is not defined</p>}
+    //         </div>
+    //     </BrowserRouter>
+    // );
 }
 
 export default App;
