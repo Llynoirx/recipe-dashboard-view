@@ -69,8 +69,7 @@ function App() {
   
   return (
     <div>
-        <h1>HELLO</h1>
-        {/* <div><Sidebar/></div>
+        <div><Sidebar/></div>
         <div className="app-container">
         <h1>Recipe List</h1>
             <SearchBar handleSearch={handleSearch} />
@@ -79,7 +78,7 @@ function App() {
             <Stats data={data} hasSearched={search && !loading}  />
             <RecipeList data={data} hasSearched={search && !loading} /> 
             </> : <p>API key is not defined</p>}
-        </div> */}
+        </div>
     </div>
 );
 }

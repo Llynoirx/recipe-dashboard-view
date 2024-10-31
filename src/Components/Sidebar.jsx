@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import './Sidebar.css';
 
 const Sidebar = () => {
     return (
         <div className="sidebar">
-        <h1>Recipe Genius</h1>
+        <h3>RECIPE DASHBOARD</h3>
         <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
