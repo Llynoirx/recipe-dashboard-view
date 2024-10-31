@@ -66,24 +66,19 @@ function App() {
       callAPI();
   }, [search, cuisine, diet, intolerances, API_KEY]);
   
-    // return (
-    //     <BrowserRouter>
-    //         <div className="app-container">
-    //             <h1>Recipe List</h1>
-    //             <SearchBar handleSearch={handleSearch} />
-    //             {API_KEY ? 
-    //                 <>
-    //                     {loading ? <div>Loading...</div> : null} 
-    //                     <Stats data={data} hasSearched={search && !loading}  />
-    //                     <Routes>
-    //                         <Route path="/" element={<RecipeList data={data} hasSearched={search && !loading} />} />
-    //                         <Route path="/recipe/:id" element={<RecipeDetail />} /> 
-    //                     </Routes>
-    //                 </>
-    //             : <p>API key is not defined</p>}
-    //         </div>
-    //     </BrowserRouter>
-    // );
+  return (
+    <div className="app-container">
+        <h1>Recipe List</h1>
+        <SearchBar handleSearch={handleSearch} />
+        {API_KEY ? 
+        <>
+          {loading ? <div>Loading...</div> : null} 
+          <Stats data={data} hasSearched={search && !loading}  />
+          <RecipeList data={data} hasSearched={search && !loading} /> 
+        </>
+        : <p>API key is not defined</p>}
+    </div>
+);
 }
 
 export default App;
