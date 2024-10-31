@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Sidebar from '../Components/Sidebar';
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
+
 
 const RecipeDetail = () => {
     const { id } = useParams(); 
@@ -8,14 +10,18 @@ const RecipeDetail = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const fetchRecipeDetail = async () => {
-            const response = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=`+API_KEY);
-            const data = await response.json();
-            setRecipe(data);
-            setLoading(false);
+        const getDetails = async () => {
+            const query = `https://api.spoonacular.com/recipes/${id}/information?apiKey=`+API_KEY
+            try {
+                const response = await fetch(query);
+                const data = await response.json();
+                setRecipe(data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching recipe:', error);
+            }
         };
-
-        fetchRecipeDetail();
+        getDetails();
     }, [id]);
 
     if (loading) return <div>Loading...</div>;
@@ -23,17 +29,22 @@ const RecipeDetail = () => {
 
     return (
         <div>
-            <h2>{recipe.title}</h2>
-            <img src={recipe.image} alt={recipe.title} />
-            <p>Ready In: {recipe.readyInMinutes} mins</p>
-            <p>Servings: {recipe.servings}</p>
-            <p>Ingredients:</p>
-            <ul>
-                {recipe.extendedIngredients.map(ingredient => (
-                    <li key={ingredient.id}>{ingredient.original}</li>
-                ))}
-            </ul>
-            <p>Instructions: {recipe.instructions}</p>
+            <div> <Sidebar /> </div>
+            <div className="detail-container">
+                <h2>{recipe.title}</h2>
+                <img src={recipe.image} alt={recipe.title} />
+                <p>Ready Time: {recipe.readyInMinutes}mins </p>
+                <p>Number of Servings: {recipe.servings} </p>
+                <p>Health Score: {recipe.healthScore}/100 </p>
+                <p>Summary: {recipe.summary}</p>
+                <p>Ingredients:</p>
+                <ul>
+                    {recipe.extendedIngredients.map((ingredient, idx) => (
+                        <li key={idx}>{ingredient.original}</li>
+                    ))}
+                </ul>
+                <p>Instructions: {recipe.instructions}</p>
+            </div>
         </div>
     );
 };

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import RecipeList from './Components/RecipeList'; 
 import SearchBar from './Components/SearchBar';
+import Sidebar from './Components/Sidebar';
 import Stats from './Components/Stats';
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
@@ -67,16 +68,18 @@ function App() {
   }, [search, cuisine, diet, intolerances, API_KEY]);
   
   return (
-    <div className="app-container">
+    <div>
+        <h1>HELLO</h1>
+        {/* <div><Sidebar/></div>
+        <div className="app-container">
         <h1>Recipe List</h1>
-        <SearchBar handleSearch={handleSearch} />
-        {API_KEY ? 
-        <>
-          {loading ? <div>Loading...</div> : null} 
-          <Stats data={data} hasSearched={search && !loading}  />
-          <RecipeList data={data} hasSearched={search && !loading} /> 
-        </>
-        : <p>API key is not defined</p>}
+            <SearchBar handleSearch={handleSearch} />
+            {API_KEY ? <>
+            {loading ? <div>Loading...</div> : null} 
+            <Stats data={data} hasSearched={search && !loading}  />
+            <RecipeList data={data} hasSearched={search && !loading} /> 
+            </> : <p>API key is not defined</p>}
+        </div> */}
     </div>
 );
 }
