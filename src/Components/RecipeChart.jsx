@@ -17,7 +17,7 @@ const RecipeChart = ({ recipeData }) => {
 
     return (
         <div className="chart-container">
-            <h3 className="chart-title">Recipe Health Score</h3>
+            <h3 className="chart-title">Recipe vs. Health Scores</h3>
             <BarChart 
                 width={400} 
                 height={400} 
@@ -25,11 +25,11 @@ const RecipeChart = ({ recipeData }) => {
                 data={recipeData}>
                 
                 <CartesianGrid strokeDasharray="5 5" />
-                <YAxis tick={{ fill: 'green' }} />
+                <YAxis tick={{ fill: "#923434" }} />
                 <Tooltip content={<CustomTooltip />} /> 
                 <Legend />
                 
-                <Bar dataKey="healthScore" fill="green" />
+                <Bar dataKey="healthScore" fill="#923434" />
             </BarChart>
         </div>
     );
