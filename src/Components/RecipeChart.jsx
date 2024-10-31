@@ -1,33 +1,28 @@
 import React from 'react';
-import { RadialBarChart, RadialBar, Legend } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import './RecipeChart.css';
 
-const RecipeChart = ({ meanHealthScore }) => {
-    const statsData = [
-        { name: 'Health Score', value: meanHealthScore, fill: '#82ca9d' },
-    ];
+const RecipeChart = ({ recipeData }) => {
+
 
     return (
-        <div>
-            <h3>Recipe Health Score</h3>
-            <RadialBarChart
-                width={400}
-                height={300}
-                cx={200}
-                cy={150}
-                innerRadius={20}
-                outerRadius={140}
-                barSize={10}
-                data={statsData}
-            >
-                <RadialBar
-                    minAngle={15}
-                    label={{ position: 'insideStart', fill: '#fff' }}
-                    background
-                    clockWise
-                    dataKey="value"
-                />
-                <Legend iconSize={10} layout="vertical" verticalAlign="middle" wrapperStyle={{ top: 0, left: 350 }} />
-            </RadialBarChart>
+        <div className="chart-container">
+            <h3 className="chart-title">Recipe Health Score</h3>
+            <LineChart 
+                width={400} 
+                height={400} 
+                margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+                data={recipeData}>
+             
+            <Line 
+                type="monotone"
+                dataKey="healthScore"
+                stroke="#ff7300" />
+              <CartesianGrid stroke="red" strokeDasharray="5 5" />
+              <XAxis dataKey="title" tick={{ fill: 'white' }} />
+              <YAxis tick={{ fill: 'white' }} />
+              <Tooltip />
+            </LineChart>
         </div>
     );
 };
