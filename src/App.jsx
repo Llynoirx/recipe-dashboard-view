@@ -67,20 +67,33 @@ function App() {
       callAPI();
   }, [search, cuisine, diet, intolerances, API_KEY]);
   
-  return (
+return (
     <div>
-        <div><Sidebar/></div>
+        <div className="sidebar"><Sidebar/></div>
         <div className="app-container">
-        <h1>Recipe List</h1>
-            <SearchBar handleSearch={handleSearch} />
-            {API_KEY ? <>
-            {loading ? <div>Loading...</div> : null} 
-            <Stats data={data} hasSearched={search && !loading}  />
-            <RecipeList data={data} hasSearched={search && !loading} /> 
-            </> : <p>API key is not defined</p>}
+        <h1>Recipes List</h1>
+            <div className="content">
+                <div className="left-section">
+                    <RecipeList data={data} hasSearched={search && !loading} />
+                </div>
+                <div className="right-section">
+                    <SearchBar handleSearch={handleSearch} />
+                    {API_KEY ? ( 
+                        <>
+                            {loading ? <div className="loading">Loading...</div> : null} 
+                            <Stats data={data} hasSearched={search && !loading} />
+                        </>
+                    ) : (
+                        <p>API key is not defined</p>
+                    )}
+                </div>
+            </div>
         </div>
     </div>
 );
+
+
+
 }
 
 export default App;
