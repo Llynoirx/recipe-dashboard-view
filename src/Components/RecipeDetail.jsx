@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Sidebar from '../Components/Sidebar';
+import './RecipeDetail.css';
+
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
 
@@ -36,7 +38,6 @@ const RecipeDetail = () => {
                 <p>Ready Time: {recipe.readyInMinutes}mins </p>
                 <p>Number of Servings: {recipe.servings} </p>
                 <p>Health Score: {recipe.healthScore}/100 </p>
-                <p>Summary: {recipe.summary}</p>
                 <p>Ingredients:</p>
                 <ul>
                     {recipe.extendedIngredients.map((ingredient, idx) => (
