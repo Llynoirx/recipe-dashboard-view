@@ -14,7 +14,7 @@ const RecipeList = ({ data, hasSearched }) => {
                         <p>Ready Time: {item.readyInMinutes}mins </p>
                         <p>Number of Servings: {item.servings} </p>
                         <p>Health Score: {item.healthScore}/100 </p>
-                        <Link to={`/recipe/${recipe.id}`}>View Details</Link>
+                        <Link to={`/recipe/${item.id}`}>View Details</Link>
                     </div>
                 ))
             ) : (hasSearched && data.length === 0 && <div>No results found</div>)}
