@@ -2,19 +2,19 @@
 
 Submitted by: **Kathy Ho**
 
-This web app: **insert description**
+This web app: **Leverage the Spoonacular Recipe API to create a dynamic recipe list that analyzes and filters categories such as cuisine, diet, and intolerances through search. Includes build-in navigation, statistic summary and data visualization, as well as being able to click on a recipe to learn more about it**
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
 - [x] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
-- [ ] **Clicking on an item in the list view displays more details about it**
-  - [ ] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
-- [ ] **Clicking on an item has a direct, unique link to that item's detail view page**
-  - [ ] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.  
+- [x] **Clicking on an item in the list view displays more details about it**
+  - [x] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
+- [x] **Clicking on an item has a direct, unique link to that item's detail view page**
+  - [x] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.  
 
 
 The following **optional** features are implemented:
@@ -30,7 +30,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-![](https://github.com/Llynoirx/data-dashboard/blob/main/recipe-dashboard.gif)
+![](https://github.com/Llynoirx/recipe-dashboard-view/blob/main/recipe-dashboard-view.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with AwesomeScreenshot and EzGif  
